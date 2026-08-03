@@ -1,7 +1,16 @@
-x = int(input("What's x? "))
-y = int(input("What's y? "))
+import time
 
-if x != y:
-    print("x is not equal to y")
-else:
-    print("x is equal to y")
+while True:
+    name = input("Enter your name: ")
+
+    match name:
+        case "Harry" | "Hermione" | "Ron":
+            print("Gryffindor")
+            break
+        case "Draco":
+            print("Slytherin")
+            break
+        case _:
+            print("Unknown house")
+            time.sleep(1) 
+            print("Please try again.")
