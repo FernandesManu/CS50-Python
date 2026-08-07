@@ -1,18 +1,8 @@
-running = True
+# Get the input from the user
+user_input = input("Enter some text: ")
 
-while running:
-    # Get input from the user
-    command = input("Enter a command (start, stop, status, quit): ").strip().lower()
-    
-    match command:
-        case "start":
-            print("System started.")
-        case "stop":
-            print("System stopped.")
-        case "status":
-            print("System is running normally.")
-        case "quit":
-            print("Exiting program...")
-            running = False  # Breaks the while loop condition
-        case _:
-            print("Unknown command. Please try again.")  # Handles invalid inputs
+# Check if "hello" is in the lowercase version of the input
+if "hello" in user_input.lower():
+    print("Yes, the input contains 'hello'!")
+else:
+    print("No, 'hello' was not found.")
