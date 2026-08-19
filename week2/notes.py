@@ -1,8 +1,11 @@
-while True: 
-    n = int(input("what's n? "))
-    if n < 0 or n != int(n):
-        continue
-    else:
-        break
+def main():
+    print_square(3)
 
-print("olá")
+def print_square(size):
+    for i in range(size):
+        print_row(size)
+
+def print_row(w):
+    print("#" * w)
+
+main()
